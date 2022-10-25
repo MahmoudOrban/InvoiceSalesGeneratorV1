@@ -75,5 +75,10 @@ public class InvoiceLine {
     public String toString() {
         return "Invoice Number"+getInvoiceNumberPerItem()+"contain item : "+itemName+", Price"+itemPrice+", count"+count;
     }
+
+     public String returnAsCSV() {
+       
+   return String.valueOf(header.getInvoiceNum())+","+itemName+","+String.valueOf(itemPrice)+","+String.valueOf(count);
+    }
     
 }

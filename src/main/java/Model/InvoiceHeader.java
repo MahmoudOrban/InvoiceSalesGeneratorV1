@@ -73,9 +73,18 @@ public class InvoiceHeader {
         }
         return invoiceTotal;
     }
-
+    public void add (InvoiceLine line)
+    {
+    this.invoiceItems.add(line);
+    }
+ public String returnAsCSV() {
+       
+   return String.valueOf(invoiceNum)+","+String.valueOf(invoiceDate)+","+customerName;
+    }
     @Override
     public String toString() {
         return "Invoice Number "+ invoiceNum+", Invoiced at date "+invoiceDate+", for Customer Name:  "+customerName +", with total "+getInvoiceTotal();
     }
+
+   
 }
